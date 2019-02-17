@@ -8,7 +8,11 @@ namespace PadawansTask4
         {
             if (str == null)
             {
-                throw new NullReferenceException();
+                throw new ArgumentNullException();
+            }
+            if (str == string.Empty)
+            {
+                throw new ArgumentException();
             }
             int answer = 0;
             for (int i = 0; i < str.Length; i++)
